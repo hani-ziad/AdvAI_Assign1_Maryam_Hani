@@ -6,8 +6,6 @@ This is our repo for CSBP711 Assignment 1 (datasets and algorithm comparison). W
 - Will the sprint close late? (more than one day after its planned end)
 - Will it spill over? (at least one committed issue is still not done at the planned end)
 
-Group repo: https://github.com/hani-ziad/SwEng_202610
-
 ## 1. The dataset
 
 - **Name:** TAWOS, a dataset of Agile open-source projects from Jira.
