@@ -1,0 +1,8 @@
+{
+  "seed": 42,
+  "timing_repeats": 5,
+  "test_sizes": {
+    "late_closure": 786,
+    "spillover": 511
+  }
+}
