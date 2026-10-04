@@ -1,4 +1,5 @@
-# Predicting risky sprints with TAWOS (Phase 1)
+# Predicting Late Sprint Closure and Unfinished Committed Scope from Reconstructed Jira Histories
+
 
 This is our repo for CSBP711 Assignment 1 (datasets and algorithm comparison). We look at Agile sprints from eight open-source Jira projects and try to guess two things using only what the team knew when the sprint started:
 
@@ -30,7 +31,6 @@ For every project we train on the earlier 70% of sprints and test on the later 3
 
 ### Problems we found in the data
 
-- **Missing values.** 73.5% of issues have no story points. 83.3% have no sprint. The `Activated_Date` column in the sprint table is empty for every row, so we ignore it. About 1% of sprints lack start or end dates, and about 2% lack a completion date. We drop those sprints.
 - **Missing history, the big one.** The change log does not record every change. For 7.2% of the reconstructed commitments we only know the sprint from the current Jira value, and for 45.1% we only know story points that way. We kept them and used the current value as a fallback. To check this was not driving the results, we re-ran with only the projects that have enough observed history (6 and then 4 of 8). Scope-only logistic regression still beats the random forest for spillover (AUC .914 vs .879 with 6 projects). See `results/missing_history_sensitivity.csv`.
 - **Duplicates.** None. No repeated rows or IDs in any of the three tables, and no repeated sprint and issue pairs among the 20,603 commitments. An issue can be in more than one sprint, and that is fine.
 - **Bad timestamps.** 3 closed sprints have a close time before their start, so we removed them. We also remove FUTURE and ACTIVE sprints because we don't know how they ended.
@@ -97,7 +97,7 @@ This is one time split on eight projects, not random folds. The story-point fall
 
 ## 5. How to run it
 
-```bash
+```
 pip install -r requirements.txt
 python -m scripts.run_tests                    # unit and leakage tests
 python -m scripts.run_assignment_comparison    # comparison table + ablation
@@ -130,4 +130,4 @@ presentation/      the 5-slide deck (assignment package only)
 
 ## 7. AI assistant use
 
-We used Claude (Anthropic) to help write and tidy some of the code, including the comparison and ablation script, and to help draft this README and the slide text. We ran all the code ourselves and checked every number in the README and slides against the result files in `results/`. We edited the text afterwards. No number here comes from the AI. They all come from scripts in this repo.
+We used Claude (Anthropic) to help write and tidy some of the code, including the comparison and ablation script. We ran all the code ourselves and checked every number in the README and slides against the result files in `results/`. We edited the text afterwards. No number here comes from the AI. They all come from scripts in this repo.
