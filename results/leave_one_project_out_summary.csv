@@ -1,0 +1,9 @@
+label,model,n_held_out_projects,mean_precision,mean_recall,mean_f1
+label_delay,heuristic,8,0.384,0.818,0.512
+label_delay,logreg,8,0.399,0.521,0.411
+label_delay,random_forest,8,0.555,0.453,0.455
+label_delay,xgboost,8,0.577,0.358,0.429
+label_spillover,heuristic,8,0.694,0.883,0.774
+label_spillover,logreg,8,0.972,0.814,0.874
+label_spillover,random_forest,8,0.934,0.981,0.955
+label_spillover,xgboost,8,0.937,0.992,0.963
