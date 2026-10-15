@@ -120,11 +120,9 @@ presentation/      the 5-slide deck (assignment package only)
 
 | Member | Contribution |
 |---|---|
-| Hani AbuSharkh | Rebuilt sprints from the change log, labels and features. Wrote the comparison and ablation script, the results tables, the data audit, and most of the writing (this README and the explanation). |
-| Maryam Hanif | Baseline and sensitivity scripts, including the training-time measurements. Scope-decomposition experiments. Designed and presented the slide deck. |
-| Samra Nawazish | Dataset background and literature check. Reviewed the data-problems section. Slide 2. |
-| Najwa Suleiman | Test plan and leakage tests. Re-ran everything on a clean machine. Slide 3. |
-| Alyah Alameeri | Slide review and rehearsal. Formatting of figures and tables. Proofread this README. |
+| Hani AbuSharkh | Rebuilt sprints from the Jira change log, including labels and features. Developed the comparison and ablation scripts, generated the results tables, and conducted the data audit. Handled the test plan and leakage tests. Contributed to the technical explanations and README documentation. |
+| Maryam Hanif | Worked on the baseline and sensitivity scripts, including training-time measurements and scope-decomposition experiments. Reviewed the dataset background, literature, and data-quality issues. Re-ran and validated the experiments, reviewed and proofread the README, and designed, prepared, and presented the slide deck, including figures and tables. |
+
 
 ## 7. AI assistant use
 
